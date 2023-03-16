@@ -36,7 +36,7 @@ pagination:
   per_page: 10
   permalink: "/:num/"
 
-read-time: true
+read-time: false
 show-tags: true
 related: false
 
