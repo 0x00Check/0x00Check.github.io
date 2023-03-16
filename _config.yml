@@ -1,0 +1,73 @@
+title: 0x00Check
+bio: Reflections on the journey of chaotic good.
+description: 0x00Check
+external-image: true
+picture: https://avatars.githubusercontent.com/u/102482427?v=4
+
+dark-theme: true
+
+blog: true
+projects: true
+resume: true
+resume-external: false
+resume-url: resume
+
+url: https://0x00Check.github.io
+#url: "http://localhost:4000"
+
+permalink: /:title/
+
+# analytics-google: 'UA-MYANALYTICS'
+
+twitter: 0x00Check
+#linkedin: mylinkedin
+github: 0x00Check
+email: contact@0x00check.com
+
+# options: [normal, large] | default: normal
+# normal = 560px / large = 810px
+width: normal
+
+# if you do/don't need pagination, toggle 'enabled' between true/false below
+pagination:
+  enabled: true
+  sort_reverse: true
+  title: ":title"
+  per_page: 10
+  permalink: "/:num/"
+
+read-time: true
+show-tags: true
+related: false
+
+post-advance-links: [blog]
+
+animation: true
+
+defaults:
+  - scope:
+      path: ""
+      layout: "post"
+    values:
+      hidden: false
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-gist
+  - jemoji
+  - jekyll-paginate-v2
+
+compress_html:
+  ignore:
+    envs:
+      - development
+      - stage
+
+exclude:
+  [
+    "README.md",
+    "Gemfile",
+    "Gemfile.lock",
+    "FAQ.md",
+    "vendor",
+  ]
