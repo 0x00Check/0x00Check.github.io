@@ -13,6 +13,7 @@ resume-external: false
 resume-url: resume
 
 url: "https://0x00Check.com"
+baseurl: ""
 #url: "http://localhost:4000"
 
 permalink: /:title/
