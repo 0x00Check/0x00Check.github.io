@@ -30,13 +30,13 @@ width: normal
 
 # if you do/don't need pagination, toggle 'enabled' between true/false below
 pagination:
-  enabled: true
+  enabled: false
   sort_reverse: true
   title: ":title"
   per_page: 10
   permalink: "/:num/"
 
-read-time: false
+read-time: true
 show-tags: true
 related: false
 
