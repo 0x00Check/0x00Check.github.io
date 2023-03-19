@@ -56,6 +56,7 @@ plugins:
   - jekyll-gist
   - jemoji
   - jekyll-paginate-v2
+  - jekyll-sitemap
 
 compress_html:
   ignore:
