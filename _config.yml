@@ -11,6 +11,7 @@ projects: true
 resume: true
 resume-external: false
 resume-url: resume
+gallery: true
 
 url: "https://0x00Check.com"
 #url: "http://127.0.0.1:4000"

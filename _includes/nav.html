@@ -37,5 +37,13 @@
                 </li>
             {% endif %}
         {% endif %}
+
+        {% if site.gallery == true %}
+            {% if page.title != "Gallery" %}
+                <li class="item">
+                    <a class="link" href="{{ site.url }}/gallery">Gallery</a>
+                </li>
+            {% endif %}
+        {% endif %}
     </ul>
 </nav>

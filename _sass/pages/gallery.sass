@@ -1,0 +1,26 @@
+.gallery
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+
+.gallery-row
+    display: flex
+    justify-content: center
+    width: 100%
+    margin-bottom: 20px
+
+.gallery-image
+    width: 30%
+    padding: 0 10px
+    position: relative
+    overflow: hidden
+    height: 250px
+
+    img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        transition: transform 0.35s
+
+    a:hover img
+        transform: scale(1.5)
