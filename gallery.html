@@ -3,21 +3,25 @@ layout: page
 title: Gallery
 ---
 
+<center>
+  <em><h4>Click on a photo to see the full resolution version :)</h4></em>
+</center>
+
 <div class="gallery">
-    {% assign sorted_gallery_images = site.static_files | where_exp: "file", "file.path contains
-    '/assets/images/gallery/'" | sort: 'name' | reverse %}
+    {% assign sorted_gallery_images = site.static_files | where_exp: "file", "file.path contains '/assets/images/gallery/'" | sort: 'name' | reverse %}
     {% for image in sorted_gallery_images %}
-    {% assign index_mod_3 = forloop.index0 | modulo: 3 %}
-    {% if index_mod_3 == 0 %}
-    <div class="gallery-row">
-        {% endif %}
-        <div class="gallery-image">
+      {% assign thumbnail_path = image.path | replace: '/assets/images/gallery/', '/assets/images/thumbnails/' %}
+      {% assign index_mod_3 = forloop.index0 | modulo: 3 %}
+      {% if index_mod_3 == 0 %}
+        <div class="gallery-row">
+      {% endif %}
+          <div class="gallery-image">
             <a href="{{ image.path }}" target="_blank">
-                <img src="{{ image.path }}" alt="Gallery image {{ forloop.index }}" />
+              <img src="{{ thumbnail_path }}" alt="Gallery Image {{ forloop.index }}" />
             </a>
+          </div>
+      {% if index_mod_3 == 2 or forloop.last %}
         </div>
-        {% if index_mod_3 == 2 or forloop.last %}
-    </div>
-    {% endif %}
+      {% endif %}
     {% endfor %}
-</div>
+  </div>
